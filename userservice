@@ -1,0 +1,15 @@
+server:
+  port: 2100
+spring:
+  application:
+    name: userservice
+eureka:
+  instance:
+  #显示服务ip地址
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    #注册中心地址
+    service-url:
+      defaultZone: http://test:123456@localhost:8260/eureka
