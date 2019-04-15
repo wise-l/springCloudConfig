@@ -1,0 +1,45 @@
+spring:
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        physical_naming_strategy: com.study.util.HibernatePhysicalNamingNamingStrategy
+    database: h2
+  h2:
+    console:
+      enabled: true
+      #浏览器访问路径
+      path: /h2-console
+      settings:
+        trace: false
+        #远程访问
+        web-allow-others: false
+  datasource:
+    #配置JDBC Driver
+    driver-class-name: org.h2.Driver
+    #配置h2数据库的连接地址 内存模式  要求最后一个正在连接的连接断开后，不要关闭数据库
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;
+    #配置数据库用户名
+    username: sa
+    #配置数据库密码
+    password:
+    #启动执行数据库结构
+    schema: classpath:schema.sql
+    #启动执行数据
+    data: classpath:data.sql
+eureka:
+  instance:
+  #显示服务ip地址
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    #注册中心地址
+    service-url:
+      defaultZone: http://test:123456@localhost:8260/eureka
+feign:
+  hystrix:
+    enabled: true
