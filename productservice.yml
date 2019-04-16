@@ -43,4 +43,3 @@ eureka:
 feign:
   hystrix:
     enabled: true
-name: eeeee
