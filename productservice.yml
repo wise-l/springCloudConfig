@@ -43,3 +43,7 @@ eureka:
 feign:
   hystrix:
     enabled: true
+#关闭验证、/refresh就可以使用
+management:
+  security:
+    enabled: false
