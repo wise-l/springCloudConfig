@@ -43,4 +43,4 @@ eureka:
 feign:
   hystrix:
     enabled: true
-name: haha
+name: eeeee
