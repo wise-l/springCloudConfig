@@ -30,6 +30,12 @@ spring:
     schema: classpath:schema.sql
     #启动执行数据
     data: classpath:data.sql
+  #zipkin 配置
+  zipkin:
+    base-url: http://localhost:8240
+  sleuth:
+    sampler:
+      percentage: 1.0
 eureka:
   instance:
   #显示服务ip地址
@@ -43,12 +49,6 @@ eureka:
 feign:
   hystrix:
     enabled: true
-#zipkin 配置
-zipkin:
-  base-url: http://localhost:8240
-sleuth:
-  sampler:
-    percentage: 1.0
 #关闭验证、/refresh就可以使用
 management:
   security:
