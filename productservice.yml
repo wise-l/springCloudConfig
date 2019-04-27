@@ -43,6 +43,12 @@ eureka:
 feign:
   hystrix:
     enabled: true
+  #zipkin 配置
+  zipkin:
+    base-url: http://localhost:8240
+  sleuth:
+    sampler:
+      percentage: 1.0
 #关闭验证、/refresh就可以使用
 management:
   security:
