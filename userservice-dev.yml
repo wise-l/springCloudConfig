@@ -30,7 +30,12 @@ spring:
     schema: classpath:schema.sql
     #启动执行数据
     data: classpath:data.sql
-    eureka:
+  zipkin:
+    base-url: http://localhost:8240
+  sleuth:
+    sampler:
+      percentage: 1.0
+eureka:
   instance:
   #显示服务ip地址
     prefer-ip-address: true
