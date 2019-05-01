@@ -6,7 +6,7 @@ spring:
     show-sql: true
     properties:
       hibernate:
-        physical_naming_strategy: com.study.util.HibernatePhysicalNamingNamingStrategy
+        physical_naming_strategy: com.study.product.util.HibernatePhysicalNamingNamingStrategy
     database: h2
   h2:
     console:
